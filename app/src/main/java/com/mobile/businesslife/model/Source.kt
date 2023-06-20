@@ -1,0 +1,6 @@
+package com.mobile.businesslife.model
+
+data class Source(
+    val id: String,
+    val name: String
+)
