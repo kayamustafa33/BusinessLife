@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mobile.businesslife.adapter.TopHeadlinesAdapter
+import com.mobile.businesslife.adapter.NewsAdapter.TopHeadlinesAdapter
 import com.mobile.businesslife.databinding.FragmentTopHeadlinesBinding
 import com.mobile.businesslife.model.News.Article
 import com.mobile.businesslife.service.NewsAPI.TopHeadlinesAPI

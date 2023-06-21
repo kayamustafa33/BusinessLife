@@ -1,4 +1,4 @@
-package com.mobile.businesslife.adapter
+package com.mobile.businesslife.adapter.NewsAdapter
 
 import android.content.Context
 import android.view.LayoutInflater

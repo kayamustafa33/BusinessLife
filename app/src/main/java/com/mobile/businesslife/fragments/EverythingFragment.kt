@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mobile.businesslife.adapter.EverythingAdapter
+import com.mobile.businesslife.adapter.NewsAdapter.EverythingAdapter
 import com.mobile.businesslife.databinding.FragmentEverythingBinding
 import com.mobile.businesslife.model.News.Article
 import com.mobile.businesslife.service.NewsAPI.EverythingAPI
