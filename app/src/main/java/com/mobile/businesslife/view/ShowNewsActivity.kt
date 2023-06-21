@@ -21,8 +21,10 @@ class ShowNewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityShowNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         getData()
+        goBack()
     }
 
     private fun getData(){
@@ -55,8 +57,10 @@ class ShowNewsActivity : AppCompatActivity() {
 
     }
 
-    override fun getOnBackInvokedDispatcher(): OnBackInvokedDispatcher {
-        onBackPressedDispatcher.onBackPressed()
-        return super.getOnBackInvokedDispatcher()
+    private fun goBack(){
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
+
 }

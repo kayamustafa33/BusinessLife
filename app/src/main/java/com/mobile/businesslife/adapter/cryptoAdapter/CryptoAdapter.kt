@@ -1,18 +1,17 @@
 package com.mobile.businesslife.adapter.cryptoAdapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mobile.businesslife.R
 import com.mobile.businesslife.databinding.RecyclerCryptoBinding
-import com.mobile.businesslife.fragments.showCrypto.ShowCryptoFragment
 import com.mobile.businesslife.model.crypto.CryptoModelItem
 import java.util.Locale
 
-class CryptoAdapter(private val context : Context, private val dataList: List<CryptoModelItem>) : RecyclerView.Adapter<CryptoAdapter.ViewHolder>() {
+
+class CryptoAdapter(private val context : Context, private var dataList: List<CryptoModelItem>) : RecyclerView.Adapter<CryptoAdapter.ViewHolder>() {
 
     class ViewHolder(val binding : RecyclerCryptoBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -50,11 +49,10 @@ class CryptoAdapter(private val context : Context, private val dataList: List<Cr
             .load(imageUrl)
             .error(R.drawable.empty_symbol)
             .into(holder.binding.coinSymbolImage)
+    }
 
-
-        holder.itemView.setOnClickListener {
-            val intent = Intent(context,ShowCryptoFragment::class.java)
-        }
-
+    fun filteredList(filteredList: ArrayList<CryptoModelItem>) {
+        dataList = filteredList
+        notifyDataSetChanged()
     }
 }

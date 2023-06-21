@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<LinearLayout android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#17202A"
-    tools:context=".fragments.main.CryptoFragment">
+    tools:context=".fragments.main.CryptoFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <EditText
+       android:id="@+id/searchCryptoText"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:layout_margin="10dp"
+       android:background="@drawable/search_bg"
+       android:drawableStart="@drawable/ic_search"
+       android:drawablePadding="8dp"
+       android:textColor="@color/white"
+       android:hint="Search..."
+       android:textColorHint="@android:color/darker_gray"
+       android:paddingStart="12dp"/>
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/cryptoRV"

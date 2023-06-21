@@ -15,6 +15,9 @@
         android:theme="@style/Theme.BusinessLife"
         tools:targetApi="31">
         <activity
+            android:name=".view.ShowCryptoActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.ShowNewsActivity"
             android:exported="false" />
         <activity
