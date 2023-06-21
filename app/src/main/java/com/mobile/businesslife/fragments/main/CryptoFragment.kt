@@ -84,7 +84,7 @@ class CryptoFragment : Fragment() {
     private fun filter(newText: String) {
         val newList: ArrayList<CryptoModelItem> = ArrayList()
         for (item in filteredList!!) {
-            if (item.symbol.lowercase(Locale.getDefault()).contains(newText)) {
+            if (item.symbol.lowercase(Locale.getDefault()).contains(newText,ignoreCase = true)) {
                 newList.add(item)
             }
         }
