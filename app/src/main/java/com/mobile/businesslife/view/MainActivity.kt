@@ -5,9 +5,9 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.mobile.businesslife.R
 import com.mobile.businesslife.databinding.ActivityMainBinding
-import com.mobile.businesslife.fragments.CryptoFragment
-import com.mobile.businesslife.fragments.EverythingFragment
-import com.mobile.businesslife.fragments.TopHeadlinesFragment
+import com.mobile.businesslife.fragments.main.CryptoFragment
+import com.mobile.businesslife.fragments.main.EverythingFragment
+import com.mobile.businesslife.fragments.main.TopHeadlinesFragment
 
 class MainActivity : AppCompatActivity() {
 

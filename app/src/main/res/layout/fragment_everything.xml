@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="#17202A"
     android:layout_height="match_parent"
-    tools:context=".fragments.EverythingFragment">
+    tools:context=".fragments.main.EverythingFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/everythingRV"

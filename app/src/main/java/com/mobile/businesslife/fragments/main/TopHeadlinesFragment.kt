@@ -1,4 +1,4 @@
-package com.mobile.businesslife.fragments
+package com.mobile.businesslife.fragments.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

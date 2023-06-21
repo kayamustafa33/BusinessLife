@@ -1,4 +1,4 @@
-package com.mobile.businesslife.fragments
+package com.mobile.businesslife.fragments.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import com.mobile.businesslife.R
 import com.mobile.businesslife.adapter.cryptoAdapter.CryptoAdapter
 import com.mobile.businesslife.databinding.FragmentCryptoBinding
 import com.mobile.businesslife.model.crypto.CryptoModelItem

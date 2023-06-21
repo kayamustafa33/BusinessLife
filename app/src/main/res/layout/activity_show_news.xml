@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlack"
+    tools:context=".view.ShowNewsActivity">
+
+    <ImageView
+        android:id="@+id/showNewsImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/showTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/showDescriptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/showContentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Content"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/showAuthorNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Author Name"
+            android:gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/showDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
