@@ -23,6 +23,7 @@ class ShowNewsActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
+
         getData()
         goBack()
     }
@@ -38,22 +39,17 @@ class ShowNewsActivity : AppCompatActivity() {
             date = data.getStringExtra("date")
         }
 
-        if(imageUrl!!.isNotEmpty() || title!!.isNotEmpty() || description!!.isNotEmpty()
-            || content!!.isNotEmpty()
-            || authorName!!.isNotEmpty()
-            || date!!.isNotEmpty()){
+        Glide.with(binding.root.context)
+            .load(imageUrl)
+            .error(R.drawable.empty_symbol)
+            .into(binding.showNewsImage)
 
-            Glide.with(binding.root.context)
-                .load(imageUrl)
-                .error(R.drawable.empty_symbol)
-                .into(binding.showNewsImage)
+        binding.showTitleText.text = title
+        binding.showDescriptionText.text = description
+        binding.showContentText.text = content
+        binding.showAuthorNameText.text = authorName
+        binding.showDateText.text = date
 
-            binding.showTitleText.text = title
-            binding.showDescriptionText.text = description
-            binding.showContentText.text = content
-            binding.showAuthorNameText.text = authorName
-            binding.showDateText.text = date
-        }
 
     }
 
