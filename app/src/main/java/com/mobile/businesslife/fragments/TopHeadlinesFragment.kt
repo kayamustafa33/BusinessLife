@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.HorizontalScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobile.businesslife.R
 import com.mobile.businesslife.adapter.TopHeadlinesAdapter
@@ -60,7 +61,7 @@ class TopHeadlinesFragment : Fragment() {
                         newsTopHeadLines?.add(response.body()!!.articles[i])
                     }
 
-                    topHeadlinesAdapter = TopHeadlinesAdapter(newsTopHeadLines!!)
+                    topHeadlinesAdapter = TopHeadlinesAdapter(binding.root.context,newsTopHeadLines!!)
                     binding.topHeadLinesRV.adapter = topHeadlinesAdapter
                 }
             }
