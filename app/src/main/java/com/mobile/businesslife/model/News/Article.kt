@@ -1,4 +1,4 @@
-package com.mobile.businesslife.model
+package com.mobile.businesslife.model.News
 
 data class Article(
     val author: String,

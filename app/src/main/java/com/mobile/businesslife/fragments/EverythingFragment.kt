@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobile.businesslife.adapter.EverythingAdapter
 import com.mobile.businesslife.databinding.FragmentEverythingBinding
-import com.mobile.businesslife.model.Article
-import com.mobile.businesslife.service.EverythingAPI
+import com.mobile.businesslife.model.News.Article
+import com.mobile.businesslife.service.NewsAPI.EverythingAPI
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

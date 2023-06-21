@@ -1,4 +1,6 @@
-package com.mobile.businesslife.model
+package com.mobile.businesslife.model.News
+
+import com.mobile.businesslife.model.News.Article
 
 data class NewsModel(
     val articles: List<Article>,

@@ -9,4 +9,8 @@
         android:title="@string/all_news"
         android:icon="@drawable/ic_news"/>
 
+    <item android:id="@+id/crypto_menu"
+        android:title="Crypto"
+        android:icon="@drawable/ic_coin"/>
+
 </menu>

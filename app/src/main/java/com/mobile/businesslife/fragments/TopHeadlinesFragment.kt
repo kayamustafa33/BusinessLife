@@ -5,14 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.HorizontalScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mobile.businesslife.R
 import com.mobile.businesslife.adapter.TopHeadlinesAdapter
 import com.mobile.businesslife.databinding.FragmentTopHeadlinesBinding
-import com.mobile.businesslife.model.Article
-import com.mobile.businesslife.model.NewsTopHeadlines
-import com.mobile.businesslife.service.TopHeadlinesAPI
+import com.mobile.businesslife.model.News.Article
+import com.mobile.businesslife.service.NewsAPI.TopHeadlinesAPI
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

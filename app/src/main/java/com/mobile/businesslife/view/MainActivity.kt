@@ -4,12 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.mobile.businesslife.R
-import com.mobile.businesslife.adapter.TopHeadlinesAdapter
 import com.mobile.businesslife.databinding.ActivityMainBinding
+import com.mobile.businesslife.fragments.CryptoFragment
 import com.mobile.businesslife.fragments.EverythingFragment
 import com.mobile.businesslife.fragments.TopHeadlinesFragment
-import com.mobile.businesslife.model.NewsTopHeadlines
-import kotlinx.coroutines.Job
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +35,11 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.everything -> {
                     replaceFragment(EverythingFragment())
+                    true
+                }
+
+                R.id.crypto_menu -> {
+                    replaceFragment(CryptoFragment())
                     true
                 }
 
