@@ -1,4 +1,4 @@
-package com.mobile.businesslife.model.Crypto
+package com.mobile.businesslife.model.crypto
 
 data class CryptoModelItem(
     val askPrice: String,

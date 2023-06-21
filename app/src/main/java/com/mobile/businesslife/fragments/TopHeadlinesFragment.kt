@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mobile.businesslife.adapter.NewsAdapter.TopHeadlinesAdapter
+import com.mobile.businesslife.adapter.newsAdapter.TopHeadlinesAdapter
 import com.mobile.businesslife.databinding.FragmentTopHeadlinesBinding
-import com.mobile.businesslife.model.News.Article
-import com.mobile.businesslife.service.NewsAPI.TopHeadlinesAPI
+import com.mobile.businesslife.model.news.Article
+import com.mobile.businesslife.service.newsApi.TopHeadlinesAPI
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

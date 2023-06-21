@@ -4,6 +4,7 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#17202A"
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
@@ -24,6 +25,7 @@
         app:itemTextColor="@color/white"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="3dp"
+        app:itemIconTint="@color/white"
         android:background="@drawable/bottom_nav_bg"
         app:menu="@menu/main_bottom_nav"/>
 

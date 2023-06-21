@@ -1,11 +1,12 @@
-package com.mobile.businesslife.adapter.CryptoAdapter
+package com.mobile.businesslife.adapter.cryptoAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.mobile.businesslife.R
 import com.mobile.businesslife.databinding.RecyclerCryptoBinding
-import com.mobile.businesslife.model.Crypto.CryptoModelItem
+import com.mobile.businesslife.model.crypto.CryptoModelItem
 
 class CryptoAdapter(private val context : Context, private val dataList: List<CryptoModelItem>) : RecyclerView.Adapter<CryptoAdapter.ViewHolder>() {
 
@@ -21,6 +22,15 @@ class CryptoAdapter(private val context : Context, private val dataList: List<Cr
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.binding.coinNameText.text = dataList[position].symbol
+        holder.binding.coinPriceText.text = "$${dataList[position].lastPrice}"
 
+        if(dataList[position].priceChange.toDouble() < 0){
+            holder.binding.coinPriceChangeImage.setImageResource(R.drawable.down)
+        }else{
+            holder.binding.coinPriceChangeImage.setImageResource(R.drawable.up)
+        }
+
+        holder.binding.coinPriceChangeText.text = dataList[position].priceChange
     }
 }

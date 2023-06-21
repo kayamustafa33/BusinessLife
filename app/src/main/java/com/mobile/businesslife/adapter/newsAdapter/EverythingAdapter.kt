@@ -1,4 +1,4 @@
-package com.mobile.businesslife.adapter.NewsAdapter
+package com.mobile.businesslife.adapter.newsAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mobile.businesslife.databinding.RecyclerEverythingBinding
-import com.mobile.businesslife.model.News.Article
+import com.mobile.businesslife.model.news.Article
 
 class EverythingAdapter(private val context : Context,private val dataList: List<Article>) : RecyclerView.Adapter<EverythingAdapter.ViewHolder>() {
 

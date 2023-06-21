@@ -1,6 +1,6 @@
-package com.mobile.businesslife.service.CryptoAPI
+package com.mobile.businesslife.service.cryptoApi
 
-import com.mobile.businesslife.model.Crypto.CryptoModel
+import com.mobile.businesslife.model.crypto.CryptoModel
 import retrofit2.Response
 import retrofit2.http.GET
 

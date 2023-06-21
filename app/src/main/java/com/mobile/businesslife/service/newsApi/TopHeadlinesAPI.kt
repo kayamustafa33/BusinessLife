@@ -1,6 +1,6 @@
-package com.mobile.businesslife.service.NewsAPI
+package com.mobile.businesslife.service.newsApi
 
-import com.mobile.businesslife.model.News.NewsModel
+import com.mobile.businesslife.model.news.NewsModel
 import retrofit2.Response
 import retrofit2.http.GET
 

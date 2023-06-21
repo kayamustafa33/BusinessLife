@@ -3,21 +3,21 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="#283747"
     android:layout_height="wrap_content">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:scaleType="fitXY"
             android:layout_weight="0.8"/>
 
         <LinearLayout
@@ -31,8 +31,9 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:padding="10dp"
+                android:textColor="@color/white"
                 android:layout_weight="1"
                 android:text="Title"/>
 
@@ -50,6 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="12sp"
+                    android:textColor="@color/white"
                     android:text="Author Name"/>
 
                 <View
@@ -57,12 +59,13 @@
                     android:layout_height="5dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
-                    android:background="@color/black"/>
+                    android:background="@color/white"/>
 
                 <TextView
                     android:id="@+id/date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_weight="1"
                     android:textSize="12sp"
                     android:text="Date"/>
