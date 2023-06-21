@@ -31,6 +31,7 @@ class CryptoFragment : Fragment() {
         binding = FragmentCryptoBinding.inflate(inflater,container,false)
 
         //Binance API -> https://data.binance.com/api/v3/ticker/24hr
+        //Crypto Symbols API -> https://cryptoicons.org/api/white/btc/200
         return binding.root
     }
 

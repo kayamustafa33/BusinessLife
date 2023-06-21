@@ -4,9 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.mobile.businesslife.R
 import com.mobile.businesslife.databinding.RecyclerCryptoBinding
 import com.mobile.businesslife.model.crypto.CryptoModelItem
+import java.util.Locale
 
 class CryptoAdapter(private val context : Context, private val dataList: List<CryptoModelItem>) : RecyclerView.Adapter<CryptoAdapter.ViewHolder>() {
 
@@ -32,5 +34,20 @@ class CryptoAdapter(private val context : Context, private val dataList: List<Cr
         }
 
         holder.binding.coinPriceChangeText.text = dataList[position].priceChange
+
+        val symbol = dataList[position].symbol
+
+        var symbolName = ""
+        if (symbol.endsWith("usdt", ignoreCase = true)) {
+            symbolName = symbol.substring(0, symbol.length - 4).lowercase(Locale.getDefault())
+        }
+
+        val imageUrl = "https://cryptoicons.org/api/white/$symbolName/200"
+
+        Glide.with(context)
+            .load(imageUrl)
+            .error(R.drawable.empty_symbol)
+            .into(holder.binding.coinSymbolImage)
+
     }
 }
