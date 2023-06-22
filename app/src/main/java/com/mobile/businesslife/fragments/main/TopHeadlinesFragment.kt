@@ -43,6 +43,9 @@ class TopHeadlinesFragment : Fragment() {
     }
 
     private fun loadTopHeadlinesData(){
+
+        binding.progressBar.visibility = View.VISIBLE
+
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -53,6 +56,9 @@ class TopHeadlinesFragment : Fragment() {
             val response = retrofit.getHeadlines()
 
             withContext(Dispatchers.Main){
+
+                binding.progressBar.visibility = View.GONE
+
                 if(response.isSuccessful){
                     for(i in 0 until response.body()!!.articles.size){
                         newsTopHeadLines?.add(response.body()!!.articles[i])

@@ -43,6 +43,9 @@ class EverythingFragment : Fragment() {
 
 
     private fun loadEverythingData(){
+
+        binding.progressBar.visibility = View.VISIBLE
+
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -53,6 +56,9 @@ class EverythingFragment : Fragment() {
             val response = retrofit.getEverything()
 
             withContext(Dispatchers.Main){
+
+                binding.progressBar.visibility = View.GONE
+
                 if(response.isSuccessful){
                     for (i in 0 until response.body()!!.articles.size) {
                         newsEverything?.add(response.body()!!.articles[i])

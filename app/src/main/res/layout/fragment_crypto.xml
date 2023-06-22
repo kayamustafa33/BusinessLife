@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#17202A"
-    tools:context=".fragments.main.CryptoFragment"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".fragments.main.CryptoFragment">
+
 
    <EditText
        android:id="@+id/searchCryptoText"
@@ -16,15 +17,36 @@
        android:background="@drawable/search_bg"
        android:drawableStart="@drawable/ic_search"
        android:drawablePadding="8dp"
-       android:textColor="@color/white"
        android:hint="Search..."
+       android:paddingStart="12dp"
+       android:textColor="@color/white"
        android:textColorHint="@android:color/darker_gray"
-       android:paddingStart="12dp"/>
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"/>
+
+
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/cryptoRV"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
+       android:layout_marginTop="65dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/searchCryptoText"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
        android:padding="3dp"/>
 
-</LinearLayout>
+   <ProgressBar
+       android:id="@+id/progressBar"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       android:visibility="gone"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:indeterminateTint="@android:color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,6 +47,9 @@ class CryptoFragment : Fragment() {
     }
 
     private fun loadCryptoData(){
+
+        binding.progressBar.visibility = View.VISIBLE
+
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -57,6 +60,9 @@ class CryptoFragment : Fragment() {
             val response = retrofit.getCryptoData()
 
             withContext(Dispatchers.Main){
+
+                binding.progressBar.visibility = View.GONE
+
                 if(response.isSuccessful){
                     response.body()?.let {
                         cryptoModelItem = ArrayList(it)
