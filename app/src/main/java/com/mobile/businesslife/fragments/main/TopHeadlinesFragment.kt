@@ -38,7 +38,7 @@ class TopHeadlinesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.topHeadLinesRV.layoutManager = LinearLayoutManager(binding.root.context,LinearLayoutManager.VERTICAL, false)
+        binding.topHeadLinesRV.layoutManager = LinearLayoutManager(binding.root.context,LinearLayoutManager.HORIZONTAL, false)
         loadTopHeadlinesData()
     }
 
